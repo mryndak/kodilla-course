@@ -13,13 +13,13 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class BookDirectoryTestSuite {
+class BookDirectoryTestSuite {
 
     @Mock
     private LibraryDatabase libraryDatabaseMock;
 
     @Test
-    public void testListBooksWithConditionsReturnList() {
+    void testListBooksWithConditionsReturnList() {
         // Given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         List<Book> resultListOfBooks = new ArrayList<>();
@@ -42,7 +42,7 @@ public class BookDirectoryTestSuite {
     }
 
     @Test
-    public void testListBooksWithConditionMoreThan20() {
+    void testListBooksWithConditionMoreThan20() {
         // Given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         List<Book> resultListOf0Books = new ArrayList<>();
@@ -67,7 +67,7 @@ public class BookDirectoryTestSuite {
     }
 
     @Test
-    public void testListBooksWithConditionFragmentShorterThan3() {
+    void testListBooksWithConditionFragmentShorterThan3() {
         // Given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         List<Book> resultListOf10Books = generateListOfNBooks(10);

@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SandStorageTestSuite {
     @Test
-    public void testGetSandBeansQuantity() {
+    void testGetSandBeansQuantity() {
         //Given
         List<SandStorage> continents = new ArrayList<>();
         continents.add(new Europe());
@@ -29,7 +29,7 @@ class SandStorageTestSuite {
     }
 
     @Test
-    public void testGetSandBeansQuantityWithReduce() {
+    void testGetSandBeansQuantityWithReduce() {
         //Given
         List<SandStorage> continents = new ArrayList<>();
         continents.add(new Europe());

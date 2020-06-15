@@ -14,18 +14,18 @@ class LibraryTestSuite {
     @Autowired
     private Library library;
 
-    @Test
-    public void testContext() {
-        //Given
-        ApplicationContext context =
-                new AnnotationConfigApplicationContext("com.kodilla.spring");
-
-        //When & Then
-        System.out.println("===== Beans list: ==== >>");
-        Arrays.stream(context.getBeanDefinitionNames())
-                .forEach(System.out::println);
-        System.out.println("<< ===== Beans list ====");
-    }
+//    @Test
+//    public void testContext() {
+//        //Given
+//        ApplicationContext context =
+//                new AnnotationConfigApplicationContext("com.kodilla.spring");
+//
+//        //When & Then
+//        System.out.println("===== Beans list: ==== >>");
+//        Arrays.stream(context.getBeanDefinitionNames())
+//                .forEach(System.out::println);
+//        System.out.println("<< ===== Beans list ====");
+//    }
 
     @Test
     public void testLoadFromDb() {

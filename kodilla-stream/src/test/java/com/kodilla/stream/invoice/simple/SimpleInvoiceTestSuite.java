@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SimpleInvoiceTestSuite {
+class SimpleInvoiceTestSuite {
     @Test
-    public void testGetValueToPay() {
+    void testGetValueToPay() {
         //Given
         SimpleInvoice invoice = new SimpleInvoice();
         //When

@@ -10,17 +10,17 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class SettingsFileEngineTestSuite {
 
     @BeforeAll
-    public static void openSettingsFile() {
+    static void openSettingsFile() {
         SettingsFileEngine.getInstance().open("myapp.settings");
     }
 
     @AfterAll
-    public static void closeSettingsFile() {
+    static void closeSettingsFile() {
         SettingsFileEngine.getInstance().close();
     }
 
     @Test
-    public void testGetFileName() {
+    void testGetFileName() {
         //Given
         //When
         String fileName = SettingsFileEngine.getInstance().getFileName();
@@ -30,7 +30,7 @@ class SettingsFileEngineTestSuite {
     }
 
     @Test
-    public void testLoadSettings() {
+    void testLoadSettings() {
         //Given
         //When
         boolean result = SettingsFileEngine.getInstance().loadSettings();
@@ -39,7 +39,7 @@ class SettingsFileEngineTestSuite {
     }
 
     @Test
-    public void testSaveSettings() {
+    void testSaveSettings() {
         //Given
         //When
         boolean result = SettingsFileEngine.getInstance().saveSettings();
