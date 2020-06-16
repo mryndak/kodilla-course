@@ -14,13 +14,13 @@ import java.util.Map;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class WeatherForecastTestSuite {
+class WeatherForecastTestSuite {
 
     @Mock
     private Temperatures temperaturesMock;
 
     @Test
-    public void testCalculateForecastWithMock() {
+    void testCalculateForecastWithMock() {
         //Given
         Map<String, Double> temperaturesMap = new HashMap<>();
         temperaturesMap.put("Rzeszow", 25.5);

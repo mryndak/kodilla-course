@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DrawerTestSuite {
     @Test
-    public void testDoDrawingWithCircle() {
+    void testDoDrawingWithCircle() {
         //Given
         Shape circle = new Circle();
         //When
@@ -17,7 +17,7 @@ class DrawerTestSuite {
     }
 
     @Test
-    public void testDoDrawingWithTriangle() {
+    void testDoDrawingWithTriangle() {
         //Given
         Shape triangle = new Triangle();
         //When

@@ -33,7 +33,7 @@ public class ForumTestSuite {
     @DisplayName("Tests for posts")
     class TestPosts {
         @Test
-        public void testAddPost() {
+        void testAddPost() {
             //Given
             ForumUser forumUser = new ForumUser("mrsmith", "John Smith");
 
@@ -46,7 +46,7 @@ public class ForumTestSuite {
         }
 
         @Test
-        public void testGetPost() {
+        void testGetPost() {
             //Given
             ForumUser forumUser = new ForumUser("mrsmith", "John Smith");
             ForumPost thePost = new ForumPost("Hello everyone, " +

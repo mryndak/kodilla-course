@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class BoardTestSuite {
     @Test
-    public void testToString() {
+    void testToString() {
         //given
         //creating the TasksList for todos
         TasksList listToDo = new TasksList("To Do Tasks");
