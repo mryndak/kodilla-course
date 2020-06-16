@@ -33,7 +33,7 @@ public final class Board extends Prototype<Board> {
     }
 
     public Board deepCopy() throws CloneNotSupportedException {
-        Board clonedBoard = super.clone();
+        Board clonedBoard = new Board(name);
         clonedBoard.lists = new HashSet<>();
         for(TasksList theList : lists) {
             TasksList clonedList = new TasksList(theList.getName());

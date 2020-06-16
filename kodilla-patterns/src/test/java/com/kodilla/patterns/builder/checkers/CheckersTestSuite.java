@@ -2,11 +2,14 @@ package com.kodilla.patterns.builder.checkers;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CheckersTestSuite {
     @Test
     void testCheckersBuilder() {
+      Object a;
         //Given
         Checkers checkers = new Checkers.CheckersBuilder()
                 .PlayerOne("John")
@@ -14,6 +17,7 @@ class CheckersTestSuite {
                 .Figure(FigureFactory.PAWN, Figure.WHITE, 0, 3)
                 .Figure(FigureFactory.PAWN, Figure.BLACK, 9, 7)
                 .Figure(FigureFactory.QUEEN, Figure.WHITE, 0, 2)
+                .Figure(FigureFactory.QUEEN, Figure.BLACK, 3, 3)
                 .build();
         System.out.println(checkers.getBoard());
 

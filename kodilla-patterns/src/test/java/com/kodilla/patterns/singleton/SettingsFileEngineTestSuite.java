@@ -9,41 +9,44 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class SettingsFileEngineTestSuite {
 
-    @BeforeAll
-    public static void openSettingsFile() {
-        SettingsFileEngine.getInstance().open("myapp.settings");
-    }
+  private static SettingsFileEngine settingsFileEngine;
 
-    @AfterAll
-    public static void closeSettingsFile() {
-        SettingsFileEngine.getInstance().close();
-    }
+  @BeforeAll
+  public static void openSettingsFile() {
+    settingsFileEngine = SettingsFileEngine.INSTANCE;
+    settingsFileEngine.open("myapp.settings");
+  }
 
-    @Test
-    public void testGetFileName() {
-        //Given
-        //When
-        String fileName = SettingsFileEngine.getInstance().getFileName();
-        System.out.println("Opened: " + fileName);
-        //Then
-        assertEquals("myapp.settings", fileName);
-    }
+  @AfterAll
+  public static void closeSettingsFile() {
+    settingsFileEngine.close();
+  }
 
-    @Test
-    public void testLoadSettings() {
-        //Given
-        //When
-        boolean result = SettingsFileEngine.getInstance().loadSettings();
-        //Then
-        assertTrue(result);
-    }
+  @Test
+  public void testGetFileName() {
+    //Given
+    //When
+    String fileName = settingsFileEngine.getFileName();
+    System.out.println("Opened: " + fileName);
+    //Then
+    assertEquals("myapp.settings", fileName);
+  }
 
-    @Test
-    public void testSaveSettings() {
-        //Given
-        //When
-        boolean result = SettingsFileEngine.getInstance().saveSettings();
-        //Then
-        assertTrue(result);
-    }
+  @Test
+  public void testLoadSettings() {
+    //Given
+    //When
+    boolean result = settingsFileEngine.loadSettings();
+    //Then
+    assertTrue(result);
+  }
+
+  @Test
+  public void testSaveSettings() {
+    //Given
+    //When
+    boolean result = settingsFileEngine.saveSettings();
+    //Then
+    assertTrue(result);
+  }
 }
